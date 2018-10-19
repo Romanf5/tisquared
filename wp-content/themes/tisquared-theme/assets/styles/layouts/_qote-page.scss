@@ -1,0 +1,187 @@
+.page-banner {
+
+  &-quote {
+
+    .page-banner-outside {
+      display: flex;
+      flex-direction: row;
+    }
+
+    .page-banner__inner {
+      min-height: 404px;
+      padding-top: 40px;
+
+      @include max-w($mobile-small) {
+        min-height: 395px;
+        padding-bottom: 30px;
+        padding-top: 0;
+      }
+    }
+
+    h1 {
+      margin-bottom: 0;
+    }
+
+    .page-banner__desc {
+
+      @include max-w($mobile-small) {
+
+        p {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+}
+
+.request-page-main {
+  background: #f3f3f3;
+  padding: 0 0 153px;
+
+  @include max-w($screen-lg) {
+    padding: 0 0 100px;
+  }
+
+  @include max-w($mobile-small) {
+    padding: 0 0 70px;
+  }
+
+  .request-page-main__inner {
+    position: relative;
+    z-index: 10;
+  }
+
+  .rq-form-step {
+    margin-top: -65px;
+    background: #fff;
+    border: solid 2px #f3f3f3;
+
+    input[type=email], input[type=password], input[type=tel], input[type=text], textarea, .ui-selectmenu-text {
+      font-size: 15px;
+
+      @include max-w($mobile-small) {
+        font-size: 14px;
+      }
+    }
+
+    h3 {
+      font-family: $font-family;
+      font-size: 13px;
+      font-weight: normal;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: normal;
+      letter-spacing: 0.6px;
+      text-align: left;
+      color: #a3a3a3;
+      padding-bottom: 5px;
+
+      @include max-w($leptop-hd) {
+        font-size: calc( (100vw - 320px)/(1680 - 320) * (13 - 10) + 10px);
+      }
+    }
+
+    h2 {
+      font-family: $font-family-title;
+      font-size: 36px;
+      font-weight: normal;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: 1.14;
+      letter-spacing: 1.2px;
+      text-align: left;
+      color: #000000;
+      padding-bottom: 23px;
+
+      @include max-w($mobile-small) {
+        padding-bottom: 33px;
+      }
+    }
+
+    &--1 {
+      padding: 47px 31px 78px;
+      @include max-w($screen-lg) {
+        padding: 30px 20px;
+      }
+
+      @include max-w($mobile-small) {
+        margin-top: -100px;
+        padding: 45px 12px;
+        margin-left: -18px;
+        margin-right: -18px;
+        overflow: hidden;
+      }
+
+
+    }
+
+    &--2 {
+      padding: 47px 40px 73px;
+      transition-delay: 0.5s;
+
+      @include max-w($screen-lg) {
+        padding: 30px 20px;
+      }
+
+      @include max-w($mobile-small) {
+        margin-top: 14px;
+        padding-bottom: 78px;
+        padding-right: 12px;
+        padding-left: 12px;
+        margin-left: -18px;
+        margin-right: -18px;
+        overflow: hidden;
+      }
+
+      h2 {
+        padding-bottom: 18px;
+      }
+    }
+
+    .file-name {
+      display: block;
+      position: static;
+
+      .file-name-del {
+        top: -3px;
+        right: -15px;
+        left: auto;
+      }
+
+      .file-name__inner {
+        display: inline-block;
+        position: relative;
+      }
+    }
+  }
+}
+
+.request-page-main__inner {
+  .form-cell-custom {
+
+    .cell {
+      &:first-of-type {
+        padding-right: 5.5px !important;
+
+        @include max-w($screen-lg) {
+          padding-right: 1.09375rem!important;
+        }
+
+        @include max-w($mobile-small) {
+          padding-right: $m-gutter !important;
+        }
+      }
+      &:last-of-type {
+        padding-left: 5.5px !important;
+
+        @include max-w($screen-lg) {
+          padding-left: 1.09375rem !important;
+        }
+
+        @include max-w($mobile-small) {
+          padding-left: $m-gutter !important;
+        }
+      }
+    }
+  }
+}

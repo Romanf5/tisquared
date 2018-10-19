@@ -1,0 +1,34 @@
+
+.grid-container {
+  max-width: 71.25rem;
+
+  @include max-w($mobile-small) {
+    max-width: 75rem;
+    width: 100%;
+  }
+}
+
+@media print, screen and (min-width: 40em) {
+  .grid-container .cell {
+    padding-left: 1.09375rem;
+    padding-right: 1.09375rem;
+  }
+}
+
+@include max-w($mobile-small) {
+
+  .grid-container:not(.full)>.grid-padding-x, .grid-padding-x .grid-padding-x {
+    margin-right: -$m-gutter;
+    margin-left: -$m-gutter;
+  }
+
+  .grid-container {
+    padding-left: $m-gutter;
+    padding-right: $m-gutter;
+  }
+
+  .grid-container .cell {
+    padding-left: $m-gutter;
+    padding-right: $m-gutter;
+  }
+}

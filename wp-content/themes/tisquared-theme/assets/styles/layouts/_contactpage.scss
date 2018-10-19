@@ -1,0 +1,270 @@
+.page-banner {
+
+  &-contact {
+
+    .page-banner-outside {
+      display: flex;
+      flex-direction: row;
+    }
+
+    .page-banner__inner {
+      min-height: 343px;
+      justify-content: flex-end;
+      padding-bottom: 100px;
+
+      @include max-w($mobile-small) {
+        padding-bottom: 90px;
+      }
+    }
+
+    h1 {
+      margin-bottom: 0;
+
+      @include max-w($mobile-small) {
+        margin-bottom: 10px;
+      }
+    }
+
+    .page-banner__desc {
+
+      p {
+        width: 100%;
+        font-size: 18px;
+        font-weight: normal;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: 1.69;
+        letter-spacing: normal;
+        text-align: left;
+        color: #191f22;
+      }
+    }
+  }
+}
+
+.contact-info-section {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  max-height: 573px;
+  transition-delay: 0.3s;
+
+  @include max-w($mobile-small) {
+    min-height: 573px;
+  }
+
+  .contact-info-section__inner {
+    background: $add-color;
+    margin-top: -60px;
+    padding: 40px;
+    transition-delay: 0.7s;
+
+    @include max-w($mobile-small) {
+      padding: 35px 30px;
+      margin-top: -48px;
+    }
+
+    .contact-info-section-subtitle {
+      h3 {
+        font-family: $font-family;
+        text-transform: uppercase;
+        font-size: 12px;
+        font-weight: normal;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: normal;
+        letter-spacing: 0.5px;
+        text-align: left;
+        color: #959595;
+
+        @include max-w($leptop-hd) {
+          font-size: calc( (100vw - 320px)/(1680 - 320) * (12 - 10) + 10px);
+        }
+      }
+      padding-bottom: 122px;
+
+      @include max-w($tablet-album) {
+        padding-bottom: 66px;
+      }
+
+      @include max-w($mobile-small) {
+        padding-bottom: 80px;
+      }
+    }
+
+    .contact-info-section-title {
+      h2 {
+        font-family: $font-family-title;
+        font-size: 30px;
+        font-weight: normal;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: 1.7;
+        letter-spacing: 1px;
+        text-align: left;
+        color: #ffffff;
+        text-transform: uppercase;
+        margin: 0;
+
+        @include max-w($leptop-hd) {
+           font-size: calc( (100vw - 320px)/(1680 - 320) * (30 - 24) + 24px);
+        }
+
+        @include max-w($mobile-small) {
+          line-height: 2.13;
+          letter-spacing: 0.8px;
+        }
+      }
+      padding-bottom: 8px;
+    }
+
+    address, a {
+      font-family: $font-family;
+      font-size: 14px;
+      font-weight: normal;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: 1.93;
+      letter-spacing: 1.1px;
+      text-align: left;
+      color: #959595;
+      text-transform: uppercase;
+
+      @include max-w($leptop-hd) {
+        font-size: calc( (100vw - 320px)/(1680 - 320) * (14 - 12) + 12px);
+      }
+    }
+
+    address:first-of-type {
+      margin-bottom: 30px;
+    }
+
+    a:hover {
+      color: #fff;
+    }
+  }
+}
+
+// Main content contact page
+.contact-page-main {
+  background: #f3f3f3;
+  padding: 0 0 129px;
+
+  .contact-page-map-container {
+    padding-top: 155px;
+    height: 100vh;
+    max-height: 817px;
+    overflow: hidden;
+    transition-delay: 0.5s;
+
+    @include max-w($screen-lg) {
+      padding-top: 50px;
+      max-height: 516px;
+    }
+
+    @include max-w($mobile-small) {
+      padding-top: 27px;
+      max-height: 420px;
+      padding-right: 0;
+      padding-left: 0;
+    }
+
+    @include max-w($iphone6s) {
+      padding-top: 27px;
+      max-height: 350px;
+    }
+  }
+
+  @include max-w($mobile-small) {
+    background: #fff;
+    padding-bottom: 0;
+  }
+}
+
+.contact-form-main {
+  margin-top: -45px;
+  position: relative;
+  z-index: 10;
+
+  @include max-w($mobile-small) {
+    margin-top: 0;
+  }
+
+  .contact-page-form-container {
+    background: #fff;
+    padding: 70px 52px 63px;
+
+    @include max-w($screen-lg) {
+      padding: 40px;
+    }
+
+    @include max-w($mobile-small) {
+      padding: 70px 0 68px;
+    }
+  }
+
+  h3 {
+    font-family: $font-family;
+    font-size: 13px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: 0.6px;
+    text-align: left;
+    color: #8f9395;
+    text-transform: uppercase;
+
+    @include max-w($leptop-hd) {
+      font-size: calc( (100vw - 320px)/(1680 - 320) * (13 - 10) + 10px);
+    }
+  }
+
+  h2 {
+    font-family: $font-family-title;
+    font-size: 42px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 0.98;
+    letter-spacing: 1.4px;
+    text-align: left;
+    color: #000;
+    padding-top: 20px;
+    padding-bottom: 37px;
+
+    @include max-w($leptop-hd) {
+      font-size: calc( (100vw - 320px)/(1680 - 320) * (42 - 36) + 36px);
+    }
+
+    @include max-w($screen-lg) {
+      padding-top: 10px;
+    }
+  }
+
+  .form-sb-btn-wrap {
+    margin-top: 37px;
+  }
+}
+
+.contact-page-map {
+  @include max-w($mobile-small) {
+    position: relative;
+    padding-bottom: 68px;
+
+    &:before {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 0;
+      right: -$m-gutter;
+      left: -$m-gutter;
+      bottom: 0;
+      background: #f3f3f3;
+
+
+    }
+  }
+}
+

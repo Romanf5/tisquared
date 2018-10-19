@@ -1,0 +1,571 @@
+
+.page-banner {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: auto;
+
+  &.page-banner-industries {
+    min-height: 379px;
+
+    .page-banner-outside {
+      display: flex;
+      flex-direction: row;
+    }
+
+    @include max-w($iphone6s) {
+      min-height: 384px;
+    }
+
+    .page-banner__inner {
+      height: auto;
+      min-height: 379px;
+      padding-top: 5rem;
+      padding-bottom: 1rem;
+      @include max-w($iphone6s) {
+        min-height: 384px;
+      }
+    }
+  }
+
+  h1, h2, h3 {
+    font-size: 42px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.21;
+    letter-spacing: 1.4px;
+    text-align: left;
+    color: $add-color;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+
+    @include max-w($leptop-hd) {
+      font-size: calc( (100vw - 320px)/(1680 - 320) * (42 - 36) + 36px);
+    }
+  }
+
+  h2 {
+    font-size: 36px;
+  }
+
+  h3 {
+    font-size: 30px;
+  }
+
+  p {
+    color: $add-color;
+    @include max-w($leptop-hd) {
+      font-size: calc( (100vw - 320px)/(1680 - 320) * (18 - 18) + 18px);
+    }
+
+    @include max-w($iphone6s) {
+      line-height: 1.5;
+    }
+  }
+}
+
+.industries-main-content {
+  padding-bottom: 146px;
+
+  @include max-w($leptop-hd) {
+    padding-bottom: 50px;
+  }
+
+  @include max-w($tablet-album) {
+    padding-bottom: 40px;
+  }
+
+  @include max-w($iphone6s) {
+    padding-bottom: 0;
+  }
+}
+
+.page-banner__title--inds {
+
+  @include max-w($iphone6s) {
+    margin-bottom: 20px;
+  }
+
+  h2, h1 {
+    @include max-w($iphone6s) {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.page-banner__inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.service-content  {
+  padding-top: 140px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  @include max-w($leptop-hd) {
+    padding-top: 50px;
+  }
+
+  @include max-w($tablet-album) {
+    padding: 40px 0 40px;
+  }
+
+  @include max-w(812px) {
+    flex-direction: column-reverse;
+  }
+
+  @include max-w($iphone6s) {
+    padding-top: 0;
+    padding-bottom: 71px;
+  }
+
+  &:first-of-type {
+    padding-top: 98px;
+
+    @include max-w($leptop-hd) {
+      padding: 50px 0 50px;
+    }
+
+    @include max-w($tablet-album) {
+      padding-top: 40px;
+    }
+
+    @include max-w($iphone6s) {
+      padding-top: 0;
+      padding-bottom: 71px;
+    }
+  }
+
+
+  &--medialeft {
+    flex-direction: row-reverse;
+
+    @include max-w(812px) {
+      width: 100%;
+      max-width: 100%;
+      flex-direction: column-reverse;
+    }
+
+    .service-content__info {
+      margin-right: auto;
+      margin-left: 0;
+      padding-right: 0;
+      padding-left: 75px;
+
+      @include max-w(812px) {
+        width: 100%;
+        max-width: 100%;
+        padding: 40px 1.09375rem 0;
+        margin: 0;
+      }
+
+      @include max-w($mobile-small) {
+        padding: 40px $m-gutter 0;
+      }
+    }
+  }
+
+  &--center {
+    align-items: center;
+  }
+
+  &__info, &__media {
+    width: 50%;
+
+    @include max-w(812px) {
+      width: 100%;
+      max-width: 100%;
+      margin: 0;
+      padding: 0;
+    }
+  }
+
+  &__info {
+    transition-delay: 0.3s;
+    padding-right: 75px;
+    max-width: 550px;
+    margin-left: auto;
+    margin-right: 0;
+
+    @include max-w($tablet-album) {
+      padding-left: 1.09375rem;
+    }
+
+    @include max-w(812px) {
+      max-width: 100%;
+      width: 100%;
+      padding: 40px 1.09375rem 0;
+      margin: 0;
+    }
+
+    @include max-w($mobile-small) {
+      padding: 40px $m-gutter 0;
+    }
+  }
+
+  &__media {
+    margin-bottom: -30px;
+
+    @include max-w($tablet-album) {
+      margin-bottom: 0;
+    }
+
+    .service-image {
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      height: 100vh;
+      max-height: 788px;
+
+      @include max-w($leptop-hd) {
+        max-height: 520px;
+      }
+
+      @include max-w(812px) {
+        max-height: 400px;
+      }
+
+      @include max-w($iphone6s) {
+        max-height: 250px;
+      }
+    }
+
+    .service-image--small {
+      max-height: 670px;
+
+      @include max-w($leptop-hd) {
+        max-height: 520px;
+      }
+
+      @include max-w($tablet-album) {
+        max-height: 480px;
+      }
+
+      @include max-w(812px) {
+        max-height: 400px;
+      }
+
+      @include max-w($iphone6s) {
+        max-height: 250px;
+      }
+    }
+
+    @include max-w($leptop-hd) {
+      margin-bottom: 0;
+      margin-top: 0;
+    }
+
+    @include max-w($tablet-album) {
+      margin-bottom: 0;
+      margin-top: 0;
+    }
+
+    .responsive-embed {
+
+      @include max-w($iphone6s) {
+        margin-bottom: 0 !important;
+      }
+    }
+  }
+
+  &--small {
+    align-items: center;
+  }
+
+  &:first-of-type {
+    align-items: flex-start;
+  }
+}
+
+.service-content__info {
+
+  .service-header {
+    padding: 26px 0 35px;
+    border-bottom: 2px dotted #a9a9a9;
+    width: 100%;
+    max-width: 405px;
+    margin-bottom: 20px;
+
+    @include max-w($leptop-hd) {
+      padding-top: 0;
+    }
+
+    @include max-w(812px) {
+      margin: 0;
+      padding: 0 0 35px;
+      width: 100%;
+      max-width: 100%;
+    }
+
+    @include max-w($iphone6s) {
+      padding-bottom: 20px;
+    }
+
+    &__sub {
+
+      h3, h2, h4 {
+        font-family: $font-family;
+        font-size: 12px;
+        font-weight: normal;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: normal;
+        letter-spacing: 0.5px;
+        text-align: left;
+        color: #8f9395;
+        text-transform: uppercase;
+        padding-bottom: 10px;
+        width: 100%;
+
+        @include max-w($leptop-hd) {
+          font-size: calc( (100vw - 320px)/(1680 - 320) * (12 - 10) + 10px);
+        }
+
+        @include max-w($iphone6s) {
+          padding-bottom: 0;
+
+        }
+      }
+    }
+
+    .service-header__title {
+
+      h2, h1 {
+        font-family: $font-family-title;
+        font-size: 42px;
+        font-weight: normal;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: 0.98;
+        letter-spacing: 1.4px;
+        color: $add-color;
+        text-transform: uppercase;
+
+        @include max-w($leptop-hd) {
+          font-size: calc( (100vw - 320px)/(1680 - 320) * (42 - 36) + 36px);
+        }
+
+        @include max-w($iphone6s) {
+          line-height: 1.14;
+          letter-spacing: 1.2px;
+        }
+      }
+    }
+  }
+
+  .service-context {
+    padding-top: 15px;
+    padding-bottom: 30px;
+
+    @include max-w(812px) {
+      padding-bottom: 0;
+    }
+
+    &__desc {
+      width: 100%;
+      max-width: 389px;
+
+      @include max-w(812px) {
+        width: 100%;
+        max-width: 100%;
+        margin: 0;
+      }
+
+      @include max-w($iphone6s) {
+        padding-top: 8px;
+      }
+
+      p {
+        font-family: $font-family-main;
+        font-size: 16px;
+        font-weight: normal;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: 1.69;
+        letter-spacing: normal;
+        text-align: left;
+        color: #616161;
+        margin-top: 30px;
+        width: 100%;
+
+        @include max-w($leptop-hd) {
+          font-size: calc( (100vw - 320px)/(1680 - 320) * (16 - 14) + 14px);
+        }
+
+        @include max-w($iphone6) {
+          line-height: 1.71;
+        }
+
+        &:first-of-type {
+          margin-top: 0;
+        }
+      }
+    }
+
+    &__btn-wrap {
+      padding-top: 35px;
+    }
+  }
+}
+
+.service-media-container__inner {
+
+  @include max-w($leptop-hd) {
+    max-height: 520px;
+    position: relative;
+  }
+
+  @include max-w(812px) {
+    max-height: 400px;
+  }
+
+  @include max-w($iphone6s) {
+    max-height: 250px !important;
+  }
+
+
+  iframe {
+
+    @include max-w($leptop-hd) {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 100%;
+      width: 100%;
+    }
+
+    @include max-w(812px) {
+      height: 100vh;
+      max-height: 400px;
+      overflow: hidden;
+    }
+
+    @include max-w($iphone6s) {
+      max-height: 250px;
+    }
+  }
+
+  .media-is-video-container {
+    height: 50vh;
+    position: relative;
+    overflow: hidden;
+    max-height: 535px;
+    width: auto;
+
+    @include max-w($leptop-hd) {
+      max-height: 520px;
+      height: 100vh;
+      max-width: 100% !important;
+    }
+
+    @include max-w($tablet-album) {
+      max-height: 350px;
+      max-width: 100% !important;
+    }
+    @include max-w(812px) {
+      max-height: 400px !important;
+    }
+
+    @include max-w($iphone6s) {
+      max-height: 250px !important;
+    }
+
+    .mejs-container .mejs-controls {
+      display: none !important;
+    }
+
+    .wp-video {
+      width: 100% !important;
+      height: 50vh;
+      max-height: 535px;
+      overflow: hidden;
+
+      @include max-w($leptop-hd) {
+        max-height: 520px;
+        height: 100vh;
+        max-width: 100% !important;
+      }
+
+      @include max-w($tablet-album) {
+        max-height: 3500px;
+        max-width: 100% !important;
+      }
+
+      @include max-w(812px) {
+        max-height: 400px !important;
+      }
+
+      @include max-w($iphone6s) {
+        max-height: 250px !important;
+      }
+
+      .mejs-container {
+        @include max-w($leptop-hd) {
+          max-height: 520px !important;
+          height: 100vh !important;
+          max-width: 100% !important;
+        }
+
+        @include max-w($tablet-album) {
+          max-height: 350px !important;
+          max-width: 100% !important;
+        }
+        @include max-w(812px) {
+          max-height: 400px !important;
+        }
+
+        @include max-w($iphone6s) {
+          max-height: 250px !important;
+        }
+      }
+
+      .wp-video-shortcode {
+        @include max-w($leptop-hd) {
+          max-height: 520px !important;
+          height: 100vh !important;
+          max-width: 100% !important;
+        }
+
+        @include max-w($tablet-album) {
+          max-height: 350px !important;
+          max-width: 100% !important;
+        }
+
+        @include max-w(812px) {
+          max-height: 400px !important;
+        }
+
+        @include max-w($iphone6s) {
+          max-height: 250px !important;
+        }
+      }
+    }
+  }
+
+  .vp-player-layout {
+    left: 0 !important;
+    right: 0 !important;
+  }
+}
+
+.service-media-container {
+  .inner-content-vimeo {
+
+    @include max-w(812px) {
+      max-height: 100%;
+      iframe {
+        max-height: 100%;
+      }
+    }
+  }
+}
+

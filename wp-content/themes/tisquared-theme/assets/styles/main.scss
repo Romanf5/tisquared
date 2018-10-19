@@ -1,0 +1,32 @@
+@import "common/variables";
+@import "common/mixins";
+
+// Automatically injected Bower dependencies via wiredep (never manually edit this block)
+// bower:scss
+@import "../../bower_components/slick-carousel/slick/slick.scss";
+// endbower
+
+@import "common/global";
+@import "components/buttons";
+@import "components/comments";
+@import "components/forms";
+@import "components/grid";
+@import "components/wp-classes";
+@import "layouts/header";
+@import "layouts/sidebar";
+@import "layouts/footer";
+@import "layouts/pages";
+@import "layouts/tinymce";
+
+//page
+
+@import "layouts/home";
+@import "layouts/process";
+@import "layouts/industries";
+@import "layouts/company";
+@import "layouts/posts";
+@import "layouts/contactpage";
+@import "layouts/qote-page";
+
+@import "layouts/page-404";
+@import "layouts/education";

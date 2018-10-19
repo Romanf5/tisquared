@@ -1,0 +1,1026 @@
+.page-banner {
+
+  &-company {
+
+    .page-banner-outside {
+      display: flex;
+      flex-direction: row;
+    }
+
+    .page-banner__desc {
+      width: 100%;
+      @include max-w($mobile-small) {
+        display: none;
+      }
+    }
+    .page-banner__inner {
+      min-height: 533px;
+
+      @include max-w($mobile-small) {
+        min-height: 382px;
+      }
+    }
+
+    .page-banner__inner {
+      height: auto;
+      min-height: 533px;
+      width: 100%;
+      max-width: 588px;
+      margin-right: auto;
+      margin-left: 0;
+      padding-top: 5rem;
+      padding-bottom: 1rem;
+
+      @include max-w($mobile-small) {
+        min-height: 382px;
+      }
+    }
+
+    .page-banner__title {
+      padding-bottom: 12px;
+      border-bottom: 2px dotted #a9a9a9;
+      width: 100%;
+
+      @include max-w($mobile-small) {
+        border-bottom: none;
+      }
+    }
+
+    .page-banner__desc {
+      padding-top: 25px;
+    }
+
+    .page-banner__btn {
+      padding-top: 32px;
+
+      @include max-w($mobile-small) {
+        padding-top: 10px;
+      }
+    }
+
+    .btn-link-more {
+      font-family: $font-family;
+      font-size: 13px;
+      font-weight: 400;
+      letter-spacing: 0.6px;
+      text-align: left;
+      min-width: 187px;
+
+      @include max-w($mobile-small) {
+        font-size: 11px;
+        min-width: 156px;
+      }
+
+
+      .btn-icon {
+
+        @include max-w($mobile-small) {
+          width: 15px;
+          height: 15px;
+        }
+
+        &:after {
+          transform: rotate(90deg);
+          margin-left: 0;
+          margin-top: 2px;
+          @include max-w($mobile-small) {
+            border-width: 3.5px 0 3.5px 7px;
+          }
+
+        }
+      }
+    }
+  }
+}
+
+.company-subhero {
+  height: 100vh;
+  max-height: 648px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-end;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  @include max-w($leptop-hd) {
+    max-height: 548px;
+  }
+
+  @include max-w($tablet) {
+    max-height: 448px;
+  }
+
+  @include max-w($mobile-small) {
+    max-height: 351px;
+  }
+
+  @include max-w($iphone6s) {
+    max-height: 251px;
+  }
+
+  &__inner {
+    background: #fff;
+    margin-bottom: -50px;
+    width: 100%;
+    max-width: 720px;
+    padding: 53px 50px;
+    transition-delay: 0.5s;
+
+    @include max-w($tablet) {
+      padding: 20px;
+    }
+
+    @include max-w($iphone6s) {
+      padding: 41px $m-gutter 65px $m-gutter;
+      margin-bottom: -316px;
+    }
+
+    h2, h3 {
+      font-family: $font-family-title;
+      font-size: 36px;
+      line-height: 1;
+      letter-spacing: normal;
+      text-align: left;
+      color: #191f22;
+      margin-bottom: 26px;
+    }
+
+    p {
+      width: 100%;
+      color: #191f22;
+      font-size: 18px;
+
+      @include max-w($mobile-small) {
+        font-size: 14px;
+        line-height: 1.71;
+      }
+    }
+  }
+}
+
+.leadership-company {
+  padding: 110px 0 93px;
+  background: #f3f3f3;
+
+  @include max-w($leptop) {
+    padding: 110px 0 40px;
+  }
+
+  @include max-w($mobile-small) {
+    padding-bottom: 59px;
+  }
+
+  @include max-w($iphone6s) {
+    padding-top: 363px;
+  }
+
+  .leadership-company-header {
+    padding-bottom: 60px;
+
+    @include max-w($mobile-small) {
+      padding-bottom: 37px;
+    }
+  }
+}
+
+
+.about-section {
+  padding: 94px 0 30px;
+  background: #fff;
+
+  @include max-w($mobile-small) {
+    padding-bottom: 65px;
+  }
+
+  &__text, &__image {
+    width: 50%;
+  }
+
+  &__text {
+    width: 100%;
+    max-width: 475px;
+    margin-left: auto;
+    margin-right: 73px;
+
+    @include max-w($tablet-album) {
+      padding-left: .9375rem;
+      margin-right: 30px;
+    }
+
+    @include max-w($tablet) {
+      max-width: 300px;
+    }
+
+    @include max-w($mobile-small) {
+      width: 100%;
+      max-width: 100%;
+      padding-left: $m-gutter;
+      padding-right: $m-gutter;
+      margin-right: 0;
+      margin-left: 0;
+      padding-top: 46px;
+    }
+  }
+
+  &__image {
+    height: 100vh;
+    max-height: 547px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    margin-bottom: -60px;
+    transition-delay: 0.3s;
+
+    @include max-w($mobile-small) {
+      width: 100%;
+      max-width: 100%;
+      margin-bottom: 0;
+      max-height: 400px;
+    }
+
+    @include max-w($iphone6s) {
+      max-height: 251px;
+    }
+  }
+
+  .about-section-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    @include max-w($mobile-small) {
+      align-items: flex-start;
+      justify-content: center;
+      flex-direction: column-reverse;
+    }
+  }
+
+  .about-section-in-title {
+    width: 100%;
+    max-width: 440px;
+    transition-delay: 0.5s;
+    h2,h3 {
+      font-family: $font-family-title;
+      font-size: 42px;
+      font-weight: normal;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: 1;
+      letter-spacing: 1.4px;
+      text-transform: uppercase;
+      color: #000000;
+      width: 100%;
+
+      @include max-w($leptop-hd) {
+        font-size: calc( (100vw - 320px)/(1680 - 320) * (42 - 36) + 36px);
+      }
+    }
+    padding-bottom: 25px;
+    border-bottom: 2px dotted #a9a9a9;
+
+    @include max-w($mobile-small) {
+      width: 100%;
+      max-width: 100%;
+      border: none;
+      padding-bottom: 0;
+    }
+  }
+
+  .about-section-in-desc {
+    padding-top: 23px;
+    width: 100%;
+    max-width: 440px;
+    margin-left: 0;
+    margin-right: auto;
+    padding-right: 30px;
+    p {
+      width: 100%;
+      font-family: $font-family-main;
+      font-size: 18px;
+      font-weight: normal;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: 1.5;
+      letter-spacing: 0;
+      text-align: left;
+      color: #000000;
+
+      @include max-w($leptop-hd) {
+        font-size: calc( (100vw - 320px)/(1680 - 320) * (18 - 14) + 14px);
+      }
+
+      @include max-w($mobile-small) {
+        padding-right: 0;
+        padding-left: 0;
+        width: 100%;
+        max-width: 100%;
+        padding-top: 0;
+        padding-right: 0;
+      }
+    }
+    @include max-w($mobile-small) {
+      padding-top: 22px;
+    }
+  }
+}
+
+.jobs-section {
+  background: #f3f3f3;
+  padding: 100px 0;
+
+  @include max-w($mobile-small) {
+    padding: 46px 0 70px;
+  }
+
+  .jobs-section-header {
+    .grid-container {
+      position: relative;
+
+      &:before {
+        content: '';
+        position: absolute;
+        max-width: calc(100% - .9375rem - .9375rem);
+        width: 100%;
+        right: 0;
+        left: 0;
+        top: 0;
+        margin: auto;
+        border-top: 2px dotted #a9a9a9;
+
+        @include max-w($mobile-small) {
+          max-width: calc(100% - 1.688rem - 1.688rem);
+        }
+      }
+    }
+  }
+
+  .jobs-section-header__sub {
+    padding-top: 27px;
+    padding-bottom: 7px;
+    transition-delay: 0.3s;
+
+    @include max-w($mobile-small) {
+      padding-top: 46px;
+    }
+    h3 {
+      font-family: $font-family;
+      font-size: 12px;
+      font-weight: normal;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: normal;
+      letter-spacing: 1.4px;
+      text-align: left;
+      color: #8f9395;
+      text-transform: uppercase;
+      @include max-w($leptop-hd) {
+        font-size: calc( (100vw - 320px)/(1680 - 320) * (12 - 10) + 10px);
+      }
+    }
+  }
+
+  .jobs-section-header__title {
+    transition-delay: 0.5s;
+    h2,h3 {
+      font-family: $font-family-title;
+      font-size: 42px;
+      font-weight: normal;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: 1;
+      letter-spacing: 1.4px;
+      text-transform: uppercase;
+      color: #000000;
+      width: 100%;
+
+      @include max-w($leptop-hd) {
+        font-size: calc( (100vw - 320px)/(1680 - 320) * (42 - 36) + 36px);
+      }
+    }
+  }
+
+  .open-position-content-container {
+    width: 100%;
+    max-width: 1290px;
+    margin: 0 auto;
+    @media print, screen and (min-width: 40em) {
+      .grid-container {
+        padding-right: .9375rem;
+        padding-left: .9375rem;
+      }
+    }
+
+    @include max-w($screen-xl) {
+      max-width: 1140px;
+      padding-right: .9375rem;
+      padding-left: .9375rem;
+    }
+
+    @include max-w($mobile-small) {
+      width: 100%;
+      max-width: 100%;
+      padding-right: 1.688rem;
+      padding-left: 1.688rem;
+    }
+  }
+}
+
+.open-position-content {
+  padding-top: 52px;
+
+  @include max-w($mobile-small) {
+    padding-top: 50px;
+  }
+}
+
+.position-info-inner-title {
+  font-family: $font-family;
+  font-size: 12px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-transform: uppercase;
+  color: #8f9395;
+  padding-bottom: 9px;
+
+  @include max-w($leptop-hd) {
+    font-size: calc( (100vw - 320px)/(1680 - 320) * (12 - 10) + 10px);
+  }
+}
+
+.job-position:nth-child(even) {
+  transition-delay: 0.3s;
+}
+
+.job-position:nth-child(odd) {
+  transition-delay: 0.5s;
+}
+
+.job-position-info {
+  width: 70%;
+  max-width: 860px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  padding-top: 23px;
+  padding-bottom: 23px;
+
+  @include max-w($leptop) {
+    width: 67%;
+  }
+
+  @include max-w($screen-xl) {
+    width: 71.1%;
+  }
+
+  @include max-w($tablet-album) {
+    width: 67.1%;
+  }
+
+  @include max-w($screen-lg) {
+    width: 66%;
+  }
+
+  @include max-w($mobile-small) {
+    width: 100%;
+    max-width: 100%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding-top: 45px;
+    padding-bottom: 51px;
+  }
+
+  .position-info-inner-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .position-info-inner_value {
+    font-family: $font-family-main;
+    font-size: 21px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    color: #000000;
+
+    @include max-w($leptop-hd) {
+      font-size: calc( (100vw - 320px)/(1680 - 320) * (21 - 18) + 18px);
+    }
+
+  }
+
+  &__date {
+    width: 100%;
+    max-width: 356px;
+    padding-right: 15px;
+    padding-left: 15px;
+    position: relative;
+
+    @include max-w($mobile-small) {
+      width: 50%;
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      display: block;
+      border-right: dotted 2px #a9a9a9;
+      width: 2px;
+      top: -15px;
+      bottom: -15px;
+      left: auto;
+      right: 0;
+
+      @include max-w($mobile-small) {
+        top: 0;
+        bottom: 0;
+        height: 51px;
+        margin: auto;
+      }
+    }
+  }
+
+  &__location {
+    width: 100%;
+    max-width: 308px;
+    padding-right: 15px;
+    padding-left: 15px;
+
+    @include max-w($mobile-small) {
+      width: 50%;
+    }
+  }
+
+}
+
+
+.job-position-inner {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+
+  @include max-w($mobile-small) {
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: center;
+  }
+}
+
+.job-position-info__btn {
+  @include max-w($screen-xl) {
+    padding-right: 15px;
+  }
+
+  @include max-w($mobile-small) {
+    padding-right: 0;
+    padding-top: 51px;
+    padding-left: 0;
+  }
+}
+
+.job-position {
+
+  &__title {
+    font-family: $font-family-title;
+    font-size: 32px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #fff;
+    background: $add-color;
+    width: 34%;
+    max-width: 430px;
+    padding: 46px 15px;
+    flex-shrink: 1;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+
+    @include max-w($leptop-hd) {
+      font-size: calc( (100vw - 320px)/(1680 - 320) * (32 - 24) + 24px);
+    }
+
+    @include max-w($screen-xl) {
+      padding: 35px 15px;
+      max-width: 320px;
+    }
+
+    @include max-w($mobile-small) {
+      max-width: 100%;
+      width: 100%;
+      min-height: 130px;
+      padding-top: 50.5px;
+      padding-top: 50.5px;
+    }
+  }
+}
+
+.job-position-info__btn {
+
+  .btn--icon {
+    min-width: 132px;
+    background: $add-color;
+    color: #fff;
+    font-size: 13px;
+    padding-top: 11px;
+    padding-bottom: 11px;
+
+    @include max-w($mobile-small) {
+      min-width: 123px;
+    }
+
+    &:hover {
+      background: #1f6a95;
+      color: #fff;
+
+      .btn-icon {
+        background: #fff;
+
+        &:after {
+          border-color: transparent transparent transparent #000;
+        }
+      }
+    }
+  }
+}
+
+.job-position {
+  margin-top: 30px;
+  transition: all 0.3s ease-in-out;
+
+  &:first-of-type {
+    margin-top: 0;
+  }
+  &:hover {
+    box-shadow: 0 2px 13px 0 rgba(0, 0, 0, 0.11);
+
+    .job-position__title {
+      background: #1f6a95;
+    }
+  }
+}
+
+
+.leadership-company-header {
+  .grid-container {
+    position: relative;
+
+    &:before {
+      content: '';
+      position: absolute;
+      width: calc(100% - .9375rem - .9375rem);
+      max-width: 100%;
+      left: 0;
+      right: 0;
+      margin: auto;
+      top: 0;
+      border-top: 2px dotted #a9a9a9;
+
+      @include max-w($mobile-small) {
+        width: calc(100% - 1.688rem - 1.688rem);
+      }
+    }
+  }
+
+  &__title {
+    padding-top: 27px;
+    h2,h3 {
+      font-family: $font-family-title;
+      font-size: 42px;
+      font-weight: normal;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: 1;
+      letter-spacing: 1.4px;
+      text-transform: uppercase;
+      color: #000000;
+      width: 100%;
+
+      @include max-w($leptop-hd) {
+        font-size: calc( (100vw - 320px)/(1680 - 320) * (42 - 36) + 36px);
+      }
+    }
+  }
+}
+
+.leadership-list {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+
+  .slick-list {
+    padding-bottom: 10px;
+  }
+
+  .slick-slide {
+
+    &:focus {
+      outline: none !important;
+    }
+  }
+
+  &__item {
+    position: relative;
+    width: 25%;
+    max-width: 331px;
+    height: 427px;
+    overflow: hidden;
+    background: #fff;
+    transition: all 0.5s ease-in-out;
+    transform: translateY(0);
+
+
+    &:focus {
+      outline: none;
+    }
+
+    @include max-w($iphone6s) {
+      max-width: 265px;
+      height: 411px;
+    }
+
+
+    .leadership-info {
+      max-width: 218px;
+      width: 100%;
+      margin-left: 0;
+      margin-right: auto;
+
+      @include max-w($iphone6s) {
+        max-width: 100%;
+        width: 100%;
+      }
+    }
+
+    .leadership-photo {
+      width: 100%;
+      max-width: 331px;
+      height: 110vh;
+      max-height: 317px;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+
+      @include max-w($iphone6s) {
+        max-width: 265px;
+        max-height: 254px;
+      }
+    }
+
+    .plus-desc {
+      display: block;
+      width: 38px;
+      height: 38px;
+      padding: 0;
+      border-radius: 50%;
+      background: #f3f3f3;
+      position: relative;
+      transition: all 0.5s ease-in-out;
+      flex-shrink: 1;
+
+      @include max-w($tablet) {
+        width: 30px;
+        height: 30px;
+      }
+
+      @include max-w($iphone6s) {
+        margin-top: 20px;
+      }
+
+      &:before, &:after {
+        content: '';
+        position: absolute;
+        width: 15px;
+        height: 2px;
+        background: $add-color;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        transition: all 0.5s ease-in-out;
+
+        @include max-w($tablet) {
+          width: 12px;
+        }
+      }
+
+      &:after {
+        width: 2px;
+        height: 15px;
+
+        @include max-w($tablet) {
+          height: 12px;
+        }
+      }
+
+      &:hover {
+        background: #1f6a95;
+        cursor: pointer;
+
+        &:after, &:before {
+          background: #fff;
+        }
+      }
+
+      &:focus {
+        outline: none;
+      }
+
+      &.plus-desc--close {
+        &:after, &:before {
+          transform: translate(-50%, -50%) rotate(45deg);
+        }
+      }
+    }
+
+    .leadership-header {
+      background: #fff;
+      padding: 15px 25px 18px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      transform: translateY(0);
+      transition: all 0.5s ease-in-out;
+
+      @include max-w($tablet) {
+        padding: 15px 15px 18px;
+      }
+
+      @include max-w($iphone6s) {
+        flex-direction: row;
+        align-items: flex-end;
+        justify-content: flex-end;
+        transform: translateY(0);
+      }
+
+      &__title {
+
+        h3, h4, p {
+          font-family: $font-family-title;
+          font-size: 32px;
+          font-weight: normal;
+          font-style: normal;
+          font-stretch: normal;
+          line-height: normal;
+          letter-spacing: 1.4px;
+          text-align: left;
+          color: #191f22;
+
+          @include max-w($tablet) {
+            font-size: 28px;
+          }
+        }
+      }
+
+      .leadership-description {
+        width: 100%;
+        padding-top: 33px;
+        position: relative;
+
+        p {
+          font-size: 16px;
+        }
+      }
+
+      &__pos {
+        min-height: 34px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+
+        p {
+          font-family: $font-family;
+          font-size: 12px;
+          font-weight: 500;
+          font-style: normal;
+          font-stretch: normal;
+          line-height: 1.42;
+          letter-spacing: normal;
+          text-align: left;
+          text-transform: uppercase;
+          color: #8f9395;
+
+          @include max-w($tablet) {
+            font-size: 10px;
+          }
+
+        }
+      }
+    }
+
+    &:hover {
+      box-shadow: 0 2px 11px 0 rgba(0, 0, 0, 0.14);
+    }
+  }
+
+  .description-is-opened {
+
+    .leadership-header {
+      transform: translateY(-100%);
+      height: 317px;
+
+      @include max-w($tablet) {
+        height: 331px;
+        transform: translateY(-96%);
+      }
+
+      @include max-w($iphone6s) {
+        transform: translateY(-77%);
+      }
+    }
+
+    .plus-desc {
+
+      @include max-w($iphone6s) {
+        position: absolute;
+        top: 15px;
+        left: auto;
+        right: 15px;
+        margin-top: 0;
+      }
+    }
+  }
+}
+
+.company-container-slider {
+  position: relative;
+  width: 100%;
+  max-width: 1408px;
+  margin-right: 0;
+  margin-left: auto;
+
+  @include max-w($leptop-hd) {
+    max-width: 1164px;
+  }
+
+  @include max-w($screen-xl) {
+    max-width: 1064px;
+  }
+
+  @include max-w($tablet-album) {
+    max-width: 900px;
+  }
+
+  @include max-w($tablet) {
+    max-width: calc(100% - 45px);
+  }
+
+  @include max-w($iphone6s) {
+    max-width: calc(100% - 25px - 1.688rem);
+  }
+}
+
+.touch-btn {
+  width: 76px;
+  height: 76px;
+  background: #1f6a95;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: -38px;
+  right: auto;
+  transform: translateY(-50%);
+  z-index: 100;
+
+  svg {
+    width: 46px;
+    height: 34px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    @include max-w($tablet) {
+      width: 30px;
+      height: 23px;
+    }
+  }
+
+
+  @include max-w($tablet) {
+    width: 50px;
+    height: 50px;
+    left: -25px;
+  }
+}

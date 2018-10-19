@@ -1,0 +1,278 @@
+//Job single 223
+
+.page-banner-job-single {
+  min-height: 511px;
+
+  .page-banner-outside {
+    display: flex;
+    flex-direction: row;
+  }
+
+  @include max-w($mobile-small) {
+    min-height: 411px;
+  }
+
+  @include max-w($iphone6s) {
+    min-height: 396px;
+  }
+
+  .page-banner__inner {
+    min-height: 511px;
+    max-width: 100%;
+
+    @include max-w($mobile-small) {
+      min-height: 411px;
+    }
+
+    @include max-w($iphone6s) {
+      min-height: 396px;
+    }
+  }
+
+  .page-banner__title {
+    width: 100%;
+
+    h2, h1 {
+      font-family: $font-family-title;
+      font-size: 42px;
+      font-weight: normal;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: 1.21;
+      letter-spacing: 1.4px;
+      text-align: left;
+      color: #191f22;
+
+      @include max-w($leptop-hd) {
+        font-size: calc( (100vw - 320px)/(1680 - 320) * (42 - 36) + 36px);
+      }
+
+
+    }
+  }
+
+  .page-banner__btn {
+    padding-top: 38px;
+
+    @include max-w($mobile-small) {
+      padding-top: 8px;
+    }
+  }
+
+  .page-banner__subtitle {
+    h3,h4,h5,p {
+      font-family: $font-family;
+      font-size: 12px;
+      font-weight: normal;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: normal;
+      letter-spacing: 0.5px;
+      text-align: left;
+      color: #8f9395;
+
+      @include max-w($leptop-hd) {
+        font-size: calc( (100vw - 320px)/(1680 - 320) * (12 - 10) + 10px);
+      }
+    }
+  }
+
+  .page-banner__desc {
+    width: 100%;
+
+    p {
+      font-family: $font-family-main;
+      font-size: 16px;
+      font-weight: normal;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: 1.69;
+      letter-spacing: normal;
+      text-align: left;
+      color: #191f22;
+    }
+    @include max-w($mobile-small) {
+      display: none;
+    }
+  }
+
+  .btn-link-more {
+    padding-left: 34px;
+
+    @include max-w($mobile-small) {
+      padding-left: 24px;
+      min-width: 186px;
+      font-size: 11px;
+    }
+
+    .btn-icon {
+      right: auto;
+      left: 0;
+
+      &:after {
+        transform: rotate(0);
+        border-color: transparent #fff transparent transparent;
+        border-width: 4px 8px 4px 0;
+        margin-top: 0;
+        margin-right: 2px;
+
+        @include max-w($mobile-small) {
+          border-width: 3.5px 7px 3.5px 0;
+        }
+      }
+    }
+  }
+}
+
+.candidate-experience {
+  padding: 80px 0 77px;
+  background: #f3f3f3;
+  transition-delay: 0.5s;
+
+  @include max-w($tablet) {
+    padding: 40px 0 30px;
+  }
+
+  @include max-w($mobile-small) {
+    padding: 82px 0 70px;
+  }
+
+  h1, h2, h3, h4, h5, h6, p {
+    font-family: $font-family-title;
+    font-size: 32px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.28;
+    letter-spacing: 1.1px;
+    text-align: left;
+    color: #000;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+
+    @include max-w($leptop-hd) {
+      font-size: calc( (100vw - 320px)/(1680 - 320) * (32 - 24) + 24px);
+    }
+
+    @include max-w($mobile-small) {
+      line-height: 1.71;
+      letter-spacing: 0.8px;
+    }
+  }
+
+  ul {
+    column-count: 2;
+    column-gap: 6rem;
+
+    @include max-w($tablet) {
+      column-gap: 3rem;
+    }
+
+    @include max-w($mobile-small) {
+      column-gap: 0;
+      column-count: 1;
+    }
+
+    li {
+      margin-top: 30px;
+
+      @include max-w($mobile-small) {
+        font-size: 14px;
+        font-weight: normal;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: 1.64;
+      }
+
+      &:first-of-type {
+        margin-top: 0;
+      }
+    }
+  }
+}
+
+
+.careers-form {
+  background: #f3f3f3;
+  padding-bottom: 110px;
+
+  .form-sb-btn-wrap {
+    @include max-w($tablet) {
+      margin-top: 40px;
+    }
+
+    @include max-w($mobile-small) {
+      margin-top: 50px;
+      min-width: 151px;
+    }
+  }
+
+  .form-submit {
+
+    @include max-w($mobile-small) {
+      min-width: 151px;
+    }
+  }
+
+  &-inner {
+    background: #fff;
+    padding: 80px 80px 97px;
+
+    @include max-w($tablet) {
+      padding: 30px 30px 80px;
+    }
+
+    @include max-w($mobile-small) {
+      padding: 0;
+    }
+  }
+
+  h2 {
+    font-family: $font-family-title;
+    font-size: 42px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 0.98;
+    letter-spacing: 1.4px;
+    text-align: left;
+    color: #000000;
+    text-transform: uppercase;
+    margin-bottom: 37px;
+
+    @include max-w($leptop-hd) {
+      font-size: calc( (100vw - 320px)/(1680 - 320) * (42 - 28) + 28px);
+      line-height: 1.29;
+      letter-spacing: 0.9px;
+    }
+  }
+
+  h3 {
+    font-family: $font-family;
+    font-size: 13px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: 0.6px;
+    text-align: left;
+    color: #8f9395;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+
+    @include max-w($leptop-hd) {
+      font-size: calc( (100vw - 320px)/(1680 - 320) * (13 - 10) + 10px);
+      line-height: 1.29;
+      letter-spacing: 0.5px;
+    }
+
+    @include max-w($mobile-small) {
+      margin-bottom: 0;
+    }
+  }
+
+  @include max-w($mobile-small) {
+    background: #fff;
+    padding: 70px 0.625rem 70px;
+  }
+}

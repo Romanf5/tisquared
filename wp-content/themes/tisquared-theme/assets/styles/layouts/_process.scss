@@ -1,0 +1,535 @@
+.hero-overview {
+  position: relative;
+  background-position: center;
+  background-size: cover;
+
+  &:before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+  }
+
+  .homepage-banner-content {
+    align-items: center;
+    justify-content: center;
+
+    @include max-w($mobile-small) {
+      padding-top: 0;
+      padding-bottom: 0;
+      min-height: auto;
+    }
+
+    p {
+      font-weight: 400;
+      letter-spacing: 0.8px;
+    }
+  }
+
+  .homepage-banner-content__title {
+    padding-bottom: 23px;
+    margin: 0 auto;
+  }
+
+  .homepage-banner-content__title, .homepage-banner-content__desc, .homepage-banner-content__btn {
+    text-align: center;
+    p, h1, h2, h3, h4, h5, h6 {
+      text-align: center;
+    }
+  }
+
+  .homepage-banner-content__title {
+    p, h1, h2, h3, h4, h5, h6 {
+      @include max-w($leptop-hd) {
+        font-size: calc( (100vw - 320px)/(1680 - 320) * (42 - 36) + 36px);
+      }
+    }
+
+    @include max-w($mobile-small) {
+      border: none;
+      padding-bottom: 0;
+
+    }
+  }
+
+  .homepage-banner-content__desc {
+    @include max-w($mobile-small) {
+      display: none;
+    }
+  }
+}
+
+.process-top-info {
+
+  @include max-w($iphone6s) {
+    padding-top: 0;
+  }
+
+  @include max-w($iphone5) {
+    padding-top: 0;
+  }
+
+
+}
+
+.fp-section {
+
+  .fp-tableCell {
+
+    @include max-w($mobile-small) {
+      vertical-align: top;
+    }
+  }
+}
+
+.full-page-nav {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  right: auto;
+  left: 46px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  z-index: 50;
+
+  @include max-w(1680px) {
+    left: 20px;
+  }
+
+
+  &__item {
+    padding-left: 0;
+
+    @include max-w(1200px) {
+      padding-left: 20px;
+
+      &:first-of-type {
+        padding-left: 0;
+      }
+    }
+
+    @include max-w($iphone6s) {
+      padding-left: 12px;
+    }
+
+    &:after {
+      display: none;
+    }
+
+    a {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      padding-left: 22.5px;
+      padding-top: 5px;
+      padding-bottom: 5px;
+      font-family: $font-family;
+      height: 41px;
+      font-size: 10px;
+      font-weight: 300;
+      line-height: 1;
+      letter-spacing: 1px;
+      color: rgba(255, 255, 255, 0.5);
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: all 0.3s ease-in-out;
+
+      @include max-w($leptop-hd) {
+        letter-spacing: 0.5px;
+        font-size: 0;
+        width: 0;
+      }
+
+      @include max-w(1200px) {
+        width: 16px;
+        height: 16px;
+        padding: 0;
+        min-height: 15px;
+      }
+
+      @include max-w($iphone6s) {
+        width: 11px;
+        height: 11px;
+        max-height: 11px;
+      }
+
+
+      &:before {
+        position: absolute;
+        border-radius: 50%;
+        content: '';
+        width: 9px;
+        height: 9px;
+        background: #fff;
+        top: 50%;
+        transform: translateY(-50%);
+        right: auto;
+        left: 3.5px;
+        transition: all 0.3s ease-in-out;
+
+        @include max-w($iphone6s) {
+          width: 7px;
+          height: 7px;
+          min-height: 7px;
+        }
+      }
+
+      &:after {
+        position: absolute;
+        content: '';
+        width: 15px;
+        height: 1px;
+        background: #fff;
+        top: 50%;
+        transform: translateY(-50%) scale(0,1);
+        border: 0.5px solid #fff;
+        right: auto;
+        left: 23px;
+        transition: all 0.3s ease-in-out;
+
+        @include max-w($leptop-hd) {
+          display: none;
+        }
+      }
+
+      &.active {
+        color: #fff;
+        padding-left: 45px;
+
+        @include max-w(1200px) {
+          padding: 0;
+        }
+
+        &:before {
+          width: 15px;
+          height: 15px;
+          border: 2px solid #fff;
+          background: none;
+          left: 0;
+
+          @include max-w($iphone6s) {
+            width: 11px;
+            height: 11px;
+          }
+        }
+
+        &:after {
+          transform: translateY(-50%) scale(1);
+        }
+      }
+    }
+
+    &:hover {
+
+      a {
+        color: #fff;
+      }
+    }
+
+
+
+  }
+
+  @include max-w(1200px) {
+    align-items: flex-end;
+    left: auto;
+    right: 22px;
+    top: calc(100% - 77px);
+    transform: translateY(0);
+    flex-direction: row;
+  }
+
+  @include max-w($mobile-small) {
+    right: $m-gutter;
+  }
+
+  @include max-w(375px) {
+    bottom: 42px;
+    top: auto;
+  }
+}
+
+.full-page-nav.dark-menu {
+
+  .full-page-nav__item {
+
+    a {
+      color: rgba(0, 0, 0, 0.5);
+
+      &:before {
+        background: #000;
+      }
+
+      &:after {
+        border-color: #000;
+      }
+
+      &:hover {
+        color: #000;
+      }
+
+      &.active {
+        color: #000;
+
+        &:before {
+          background: none;
+          border-color: #000;
+        }
+      }
+    }
+  }
+}
+
+.section {
+
+  &.odd-fn-section {
+    background: #fff;
+  }
+
+  &.even-fn-section {
+    background: #f3f3f3;
+  }
+}
+
+.procces-scroll-link {
+  left: 29px;
+
+  &:hover {
+
+    &:before {
+      width: 30px;
+    }
+  }
+
+  @include max-w($leptop-hd) {
+    left: 3px;
+  }
+
+  @include max-w(1200px) {
+    top: calc(100% - 90px);
+  }
+
+  @include max-w($mobile-small) {
+    left: 10px
+  }
+
+  @include max-w(375px) {
+    top: auto;
+    bottom: 61px;
+  }
+
+  &.dark-scroll {
+    color: #000;
+    opacity: 1;
+
+    &:before {
+      border-color: #000;
+    }
+  }
+
+  &--top {
+    left: 10px;
+
+    @include max-w($leptop-hd) {
+      left: -15px;
+    }
+
+    @include max-w($tablet) {
+      top: calc(100% - 110px);
+    }
+
+    @include max-w($mobile-small) {
+      left: -5px;
+    }
+
+    &:before {
+      left: calc(100% + 20px);
+    }
+  }
+}
+
+.procces-scroll-link--top {
+  display: none;
+
+  @include max-w(375px) {
+    top: auto;
+    bottom: 78px;
+  }
+}
+
+
+
+.process-info-content {
+
+  @include max-w($tablet) {
+    padding-top: 22px;
+  }
+
+  @include max-w($mobile-small) {
+    display: none;
+  }
+
+  p, li {
+    font-family: $font-family-main;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.69;
+    letter-spacing: normal;
+    text-align: left;
+    color: #585858;
+
+    @include max-w($leptop-hd) {
+      font-size: calc( (100vw - 320px)/(1680 - 320) * (16 - 14) + 14px);
+    }
+
+    @include max-w($mobile-small) {
+      line-height: 1.71;
+    }
+  }
+
+  a {
+    color: $add-color;
+  }
+
+}
+
+.section:not(.hero-overview) {
+  .fp-tableCell {
+    @media print, screen and (min-width: 40em) {
+      vertical-align: top;
+      padding-top: 8.625rem;
+    }
+
+    @include max-w($tablet) {
+      padding-top: 80px;
+    }
+
+    @include max-h(414px) {
+      padding-top: 4rem;
+    }
+
+
+  }
+}
+
+.process-step-info {
+
+  &__title {
+    font-family: $font-family;
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    text-align: left;
+    color: #9f9f9f;
+    padding-top: 27px;
+
+    @include max-w($leptop-hd) {
+      font-size: calc( (100vw - 320px)/(1680 - 320) * (12 - 10) + 10px);
+    }
+
+    @include max-w($mobile-small) {
+      padding-top: 46px;
+    }
+  }
+
+  .process-step-info__main-ttl >  h2 {
+    font-family: $font-family-title;
+    font-size: 42px;
+    font-weight: normal;
+    line-height: 0.98;
+    letter-spacing: 1.4px;
+    text-align: left;
+    color: #000000;
+
+    @include max-w($leptop-hd) {
+      font-size: calc( (100vw - 320px)/(1680 - 320) * (42 - 36) + 36px);
+      padding-top: 8px;
+    }
+
+
+    @include max-w($mobile-small) {
+      line-height: 1.14;
+      letter-spacing: 1.2px;
+      padding-top: 0;
+    }
+  }
+}
+
+
+.process-top-info > .grid-container:first-of-type {
+  position: relative;
+
+  &:before {
+    content: '';
+    position: absolute;
+    width: calc(100% - .9375rem - .9375rem);
+    left: 0;
+    right: 0;
+    margin: auto;
+    top: 0;
+    border-top: 2px dotted #a9a9a9;
+
+    @include max-w($mobile-small) {
+      width: calc(100% - 1.688rem - 1.688rem);
+    }
+
+    @include max-w($tablet) {
+      display: none;
+    }
+
+    @include max-h(414px) {
+      display: none;
+    }
+  }
+}
+
+.process-container-image {
+  img {
+
+    @include max-w(1366px) {
+      display: block;
+      width: auto;
+      max-width: 400px;
+      margin: 0 auto;
+    }
+
+    @include max-w($tablet) {
+      max-width: 500px;
+    }
+
+    @include max-w($mobile-small) {
+      max-width: 100%;
+    }
+
+    @include max-w($iphone5) {
+      max-width: 240px;
+    }
+  }
+}
+
+
+.procces-scroll-link, .process-container-image {
+
+  @media screen and (orientation: landscape) and (max-height: 375px) {
+    display: none !important;
+  }
+
+  @media screen and (orientation: landscape) and (max-height: 414px) {
+    display: none !important;
+  }
+
+  @media screen and (orientation: landscape) and (max-height: 320px) {
+    display: none !important;
+  }
+}

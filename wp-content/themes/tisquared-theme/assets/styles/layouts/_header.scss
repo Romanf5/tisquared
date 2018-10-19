@@ -1,0 +1,61 @@
+.main-nav-list .current-menu-item {
+
+  a {
+
+    &:after {
+      transform: scale(1);
+    }
+  }
+}
+
+.another-header {
+
+  &.main-header--fixed {
+
+    .logo {
+
+      svg, img {
+        display: block !important;
+        z-index: 300;
+        position: relative;
+      }
+    }
+  }
+
+  .main-nav-list {
+
+    li {
+
+      a {
+        color: $add-color;
+
+        &:after {
+          background: $add-color;
+        }
+      }
+    }
+  }
+
+  .btn--border {
+    border-color: $add-color;
+    color: $add-color;
+
+    &:hover {
+      background: $add-color;
+      color: #fff;
+    }
+  }
+}
+
+
+.single-jobs {
+
+  .company-menu-item {
+
+    a:after {
+      transform: translateX(-50%) scale(1);
+    }
+  }
+}
+
+

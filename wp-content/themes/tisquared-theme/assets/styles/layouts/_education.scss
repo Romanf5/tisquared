@@ -1,0 +1,326 @@
+.page-banner {
+
+  &.page-banner-ed {
+    min-height: 364px;
+
+    .page-banner-outside {
+      display: flex;
+      flex-direction: row;
+    }
+
+    @include max-w($tablet-album) {
+      min-height: 340px;
+    }
+
+    @include max-w($mobile-small) {
+      min-height: 300px;
+    }
+
+    h2, h1, h3 {
+
+      @include max-w($leptop-hd) {
+        font-size: calc( (100vw - 320px)/(1680 - 320) * (42 - 36) + 36px);
+      }
+
+      @include max-w($mobile-small) {
+        margin-bottom: 0;
+      }
+    }
+
+    p {
+      width: 100%;
+      font-family: $font-family-main;
+      font-size: 16px;
+      font-weight: normal;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: 1.69;
+      letter-spacing: normal;
+      text-align: left;
+      color: #191f22;
+
+      @include max-w($leptop-hd) {
+        font-size: calc( (100vw - 320px)/(1680 - 320) * (16 - 14) + 14px);
+      }
+
+      @include max-w($iphone6s) {
+        line-height: 1.71;
+      }
+    }
+
+    .page-banner__inner {
+      min-height: 364px;
+
+      @include max-w($tablet-album) {
+        min-height: 340px;
+      }
+
+      @include max-w($mobile-small) {
+        min-height: 300px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+      }
+    }
+  }
+}
+
+.education-subsection-wrapper {
+  position: relative;
+  height: 100vh;
+  max-height: 573px;
+
+  @include max-w($mobile-small) {
+    max-height: inherit;
+    height: auto;
+    background: $add-color;
+  }
+}
+
+.education-subsection-bg {
+  height: 100vh;
+  max-height: 573px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  @include max-w($tablet) {
+    max-height: 480px;
+  }
+
+  @include max-w($mobile-small) {
+    max-height: inherit;
+    height: auto;
+    padding-bottom: 30px;
+  }
+
+  &:before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+  }
+}
+
+.education-subsection-text {
+  padding: 50px 23px 41px 23px;
+  background: $add-color;
+  width: 100%;
+  max-width: 442px;
+  margin-right: auto;
+  margin-left: -39px;
+  margin-top: -88px;
+  z-index: 10;
+  position: relative;
+
+  @include max-w($screen-xl) {
+    margin-left: 0;
+  }
+
+  @include max-w($mobile-small) {
+    width: 100%;
+    max-width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: -40px;
+  }
+
+
+  .education-subsection-text-title {
+    padding-bottom: 37px;
+    border-bottom: 2px dotted #a9a9a9;
+
+    h2,h1,h3 {
+      font-family: $font-family-title;
+      font-size: 36px;
+      font-weight: normal;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: 1.1;
+      letter-spacing: normal;
+      text-align: left;
+      color: #ffffff;
+      width: 100%;
+
+      @include max-w($leptop-hd) {
+        font-size: calc( (100vw - 320px)/(1680 - 320) * (36 - 24) + 24px);
+      }
+    }
+  }
+
+  .education-subsection-text-info {
+    p {
+      width: 100%;
+      font-family: $font-family-main;
+      font-size: 16px;
+      font-weight: normal;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: 1.69;
+      letter-spacing: normal;
+      text-align: left;
+      color: #959595;
+      padding-top: 37px;
+
+      @include max-w($leptop-hd) {
+        font-size: calc( (100vw - 320px)/(1680 - 320) * (16 - 14) + 14px);
+      }
+
+      @include max-w($iphone6s) {
+        line-height: 1.71;
+      }
+
+    }
+  }
+
+  .cell {
+    @include max-w($mobile-small) {
+
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+
+  .grid-x {
+
+    @include max-w($mobile-small) {
+      margin-right: 0;
+      margin-left: 0;
+    }
+  }
+
+}
+
+
+.education-about {
+  background: #fff;
+  padding-bottom: 158px;
+
+  @include max-w($tablet-album) {
+    padding-bottom: 100px;
+  }
+
+  @include max-w($mobile-small) {
+    padding-bottom: 0;
+  }
+
+  .education-about-inner {
+    padding: 50px 0 0;
+    background: #f3f3f3;
+    position: relative;
+
+    &:after {
+      content: '';
+      display: block;
+      position: absolute;
+      width: calc(100% - .9375rem - .9375rem);
+      max-width: 1110px;
+      left: 0;
+      right: 0;
+      margin: auto;
+      top: 50px;
+      border-bottom: 2px dotted #a9a9a9;
+
+      @include max-w($mobile-small) {
+        display: none;
+      }
+    }
+
+    @include max-w($mobile-small) {
+      padding-top: 0;
+    }
+  }
+
+
+  .education-about-container {
+    padding-top: 52px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    @include max-w($mobile-small) {
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+      padding-top: 40px;
+    }
+  }
+
+  &__text, &__image {
+    width: 50%;
+
+    @include max-w($mobile-small) {
+      width: 100%;
+      max-width: 100%;
+    }
+  }
+
+  &__image {
+    width: 50%;
+    height: 100vh;
+    max-height: 500px;
+    margin-bottom: -56px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    @include max-w($mobile-small) {
+      width: 100%;
+      max-width: 100%;
+      max-height: 251px;
+      margin-bottom: 0;
+    }
+  }
+
+  &__text {
+    max-width: 425px;
+    padding-left: 45px;
+    padding-bottom: 1.09375rem;;
+    padding-top: 40px;
+    margin-right: auto;
+    padding-right: 1.09375rem;
+    margin-left: 0;
+    transition-delay: 0.5s;
+
+    @include max-w($mobile-small) {
+      width: 100%;
+      max-width: 100%;
+      padding-left: $m-gutter;
+      padding-right: $m-gutter;
+      padding-bottom: 40px;
+      margin-right: 0;
+      margin-left: 0;
+    }
+
+    p {
+      width: 100%;
+      font-family: $font-family-main;
+      font-size: 16px;
+      font-weight: normal;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: 1.69;
+      letter-spacing: normal;
+      text-align: left;
+      color: #616161;
+      padding-top: 37px;
+
+      @include max-w($leptop-hd) {
+        font-size: calc( (100vw - 320px)/(1680 - 320) * (16 - 14) + 14px);
+      }
+
+      @include max-w($iphone6s) {
+        line-height: 1.71;
+      }
+
+      &:first-of-type {
+        padding-top: 0;
+      }
+    }
+  }
+
+}
